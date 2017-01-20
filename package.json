@@ -1,0 +1,12 @@
+{
+  "name": "project-templater",
+  "version": "1.0.0",
+  "description": "A library for templating projects",
+  "main": "index.js",
+  "author": "Rayzr",
+  "license": "MIT",
+  "dependencies": {
+    "fs-readdir-recursive": "^1.0.0",
+    "path": "^0.12.7"
+  }
+}
