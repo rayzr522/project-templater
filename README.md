@@ -28,22 +28,22 @@ To use `project-templater`, it's as simple as the following code:
     The path of the destination project directory. If this folder does not exist, it will be created.
 - `context: Object`  
     The context object to be used for key-value replacement.
-- `filter?: (file) => boolean`  
+- `filter?: (filename: string) => boolean`  
     An optional filter to control which files are copied over from the template. If this filter-callback returns `false` on a file, that file will not be copied. All file names passed to this callback are relative to the template folder.
 
 ## Templating examples
-`<template>/myFile.txt`:
+
+#### `<template>/myFile.txt`:
 
     This is my file about $((projectName)). Description: $((description)).
 
-`context` object:
+#### `context` object:
 
     {
         projectName: 'My Project',
         description: 'A fancy templated project'
     }
 
-`<destination>/myFile.txt`:
+#### `<destination>/myFile.txt`:
 
     This is my file about My Project. Description: A fancy templated project.
-    
